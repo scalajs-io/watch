@@ -1,0 +1,9 @@
+{
+  "name": "watch-scalajs",
+  "version": "0.3.1",
+  "private": true,
+  "dependencies": {
+    "source-map": "^0.5.6",
+    "watch": "^1.0.1"
+  }
+}
