@@ -1,21 +1,23 @@
 Watch API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [Watch](https://www.npmjs.com/package/watch)
+[watch](https://www.npmjs.com/package/watch) - Utilities for watching file trees.
+
+### Description
 
 Utilities for watching file trees.
 
-#### Build Dependencies
+### Build Dependencies
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
-#### Build/publish the SDK locally
+### Build/publish the SDK locally
 
 ```bash
  $ sbt clean publish-local
 ```
 
-#### Running the tests
+### Running the tests
 
 Before running the tests the first time, you must ensure the npm packages are installed:
 
@@ -29,7 +31,7 @@ Then you can run the tests:
 $ sbt test
 ```
 
-#### Examples
+### Examples
 
 Watch the directory tree:
 
@@ -118,12 +120,12 @@ file 'node_modules/watch/test/d/t' (0 bytes)
 file 'node_modules/watch/test/d/d/t' (0 bytes)
 ```
 
-#### Artifacts and Resolvers
+### Artifacts and Resolvers
 
-To add the Moment binding to your project, add the following to your build.sbt:  
+To add the `Watch` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "watch" % "0.3.0.3"
+libraryDependencies += "io.scalajs.npm" %%% "watch" % "1.0.1"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
