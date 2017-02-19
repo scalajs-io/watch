@@ -34,19 +34,19 @@ object Monitor {
       * A file has been changed. Three arguments, the filename, the current stat object, and the previous stat object.
       * @example monitor.on("changed", function (f, curr, prev) { ... })
       */
-    def onChanged(callback: (String, Stats, Stats) => Any) = monitor.on("changed", callback)
+    def onChanged(callback: (String, Stats, Stats) => Any): monitor.type = monitor.on("changed", callback)
 
     /**
       * New file has been created. Two arguments, the filename and the stat object.
       * @example monitor.on("created", function (f, stat) { ... })
       */
-    def onCreated(callback: (String, Stats) => Any) = monitor.on("created", callback)
+    def onCreated(callback: (String, Stats) => Any): monitor.type = monitor.on("created", callback)
 
     /**
       * A file has been moved or deleted. Two arguments, the filename and the stat object for the fd.
       * @example monitor.on("removed", function (f, stat) { ... })
       */
-    def onRemoved(callback: (String, Stats) => Any) = monitor.on("removed", callback)
+    def onRemoved(callback: (String, Stats) => Any): monitor.type = monitor.on("removed", callback)
 
   }
 
