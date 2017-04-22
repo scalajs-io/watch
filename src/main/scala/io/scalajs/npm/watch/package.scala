@@ -3,7 +3,7 @@ package io.scalajs.npm
 import io.scalajs.nodejs.fs.Stats
 import io.scalajs.util.PromiseHelper._
 
-import scala.concurrent.Promise
+import scala.concurrent.Future
 import scala.scalajs.js
 import scala.scalajs.js.Dictionary
 
@@ -27,7 +27,7 @@ package object watch {
       * @example watch.createMonitor('/home/mikeal', function (monitor) { ... })
       */
     @inline
-    def createMonitorFuture(root: String, options: WatchOptions = null): Promise[Monitor] = {
+    def createMonitorFuture(root: String, options: WatchOptions = null): Future[Monitor] = {
       promiseCallback1[Monitor](watch.createMonitor(root, options, _))
     }
 
@@ -38,7 +38,7 @@ package object watch {
       * @example watch.watchTree('/home/mikeal', function (f, curr, prev) { ... })
       */
     @inline
-    def watchTreeFuture(root: String, options: WatchOptions = null): Promise[(Dictionary[Stats], Stats, Stats)] = {
+    def watchTreeFuture(root: String, options: WatchOptions = null): Future[(Dictionary[Stats], Stats, Stats)] = {
       promiseCallback3[js.Dictionary[Stats], Stats, Stats](watch.createMonitor(root, options, _))
     }
 
