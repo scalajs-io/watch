@@ -8,7 +8,7 @@ Utilities for watching file trees.
 
 ### Build Dependencies
 
-* [SBT v0.13.16](http://www.scala-sbt.org/download.html)
+* [SBT v1.2.x](http://www.scala-sbt.org/download.html)
 
 ### Build/publish the SDK locally
 
@@ -124,7 +124,7 @@ file 'node_modules/watch/test/d/d/t' (0 bytes)
 To add the `Watch` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "watch" % "0.4.2"
+libraryDependencies += "io.scalajs.npm" %%% "watch" % "0.5.0"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
